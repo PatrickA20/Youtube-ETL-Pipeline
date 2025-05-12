@@ -95,6 +95,11 @@ Description: Automates the ETL process for trending YouTube video data.
 
 These screenshots are included to give a reference as to what it is supposed to look like in Airflow. 
 
+### Graph View
+![Graph View](images/DAG%20Graph%20View.png)
+
+### List View
+![List View](images/DAG%20List%20View.png)
 
 
 # Notes
