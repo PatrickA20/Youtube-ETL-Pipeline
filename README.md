@@ -25,7 +25,7 @@ Automation: Orchestrated using Apache Airflow with a daily scheduled DAG.
 
 ## Project Structure
 
-It is wrapped around a main folder "690A Final". Inside there are four other folders to keep the ETL process organized and clear. The "dags" folder is to automate the schedule process using AirFlow. While the folders: "extract", "transform", and "load" are showing each step of the process. With files ".env.example" showing where you need to input your Youtube API key and PostgreSQL information. The "requirements.txt" file is there for all the libraries necessary in this project. 
+It is wrapped around a main folder "690A Final". Inside there are four other folders to keep the ETL process organized and clear. The "dags" folder is to automate the schedule process using Airflow. While the folders: "extract", "transform", and "load" are showing each step of the process. With files ".env.example" showing where you need to input your Youtube API key and PostgreSQL information. The "requirements.txt" file is there for all the libraries necessary in this project. 
 
 # Setup Instructions
 
@@ -74,10 +74,28 @@ airflow users create --username admin --firstname YourName --lastname LastName -
 
 Start Airflow:
 ```
+airflow db init
+airflow users create --username admin --firstname Patrick --lastname Anderson --role Admin --email patrick20anderson@gmail.com --password admin
 airflow webserver --port 8080
+
+# In a second terminal:
 airflow scheduler
 ```
 Access Airflow at http://localhost:8080 and trigger the youtube_trending_etl DAG.
+
+# Airflow DAG Details
+
+DAG Name: `youtube_trending_etl`
+
+Schedule: `@daily`
+
+Description: Automates the ETL process for trending YouTube video data.
+
+## DAG Visuals
+
+These screenshots are included to give a reference as to what it is supposed to look like in Airflow. 
+
+
 
 # Notes
 
