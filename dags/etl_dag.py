@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import sys
 import os
 
-#Fix import paths for Airflow
+#Fix import paths for Airflow so it is set
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from extract.extract_data import extract_trending_videos
@@ -14,7 +14,7 @@ from load.load_data import load_data_to_postgres
 default_args = {
     'owner': 'patricka20',
     'depends_on_past': False,
-    'email': ['your_email@example.com'],  # Optional
+    'email': ['patrick20anderson@gmail.com'],
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
