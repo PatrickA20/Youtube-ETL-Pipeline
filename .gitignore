@@ -1,0 +1,25 @@
+#Virtual Environment
+.venv/
+#Python Cache Files
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+#Jupyter and IPython
+.ipynb_checkpoints/
+#Environment Variables
+.env
+#MacOS Metadata
+.DS_Store
+#Airflow Files
+airflow.db
+airflow.cfg
+logs/
+#VSCode Settings
+.vscode/
+#Temporary Files
+*.bak
+*.tmp
